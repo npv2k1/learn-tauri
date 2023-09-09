@@ -4,6 +4,8 @@ import { emit, listen } from "@tauri-apps/api/event";
 import React, { useEffect, useState } from "react";
 import { open } from "@tauri-apps/api/dialog";
 import { readBinaryFile } from "@tauri-apps/api/fs";
+import { appConfigDir, dataDir } from "@tauri-apps/api/path";
+import { fs } from "@tauri-apps/api";
 
 const HomePage = () => {
   const [doCommand] = useTauriCommand();
@@ -21,6 +23,25 @@ const HomePage = () => {
   //   return () => {
   //     unlisten();
   //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const dataDirPath = await dataDir();
+  //     const appConfigDirPath = await appConfigDir();
+  //     console.log(
+  //       "🚀 ~ file: index.tsx:30 ~ useEffect ~ appConfigDirPath:",
+  //       appConfigDirPath
+  //     );
+
+  //     console.log(
+  //       "🚀 ~ file: index.tsx:29 ~ useEffect ~ dataDirPath:",
+  //       dataDirPath
+  //     );
+
+  //     const files = await fs.readDir(appConfigDirPath);
+  //     console.log("🚀 ~ file: index.tsx:43 ~ files:", files);
+  //   })();
   // }, []);
 
   const [image, setIamge] = useState("");

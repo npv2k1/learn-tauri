@@ -11,9 +11,7 @@ pub fn make_menu() -> Menu {
             .add_item(quit)
             .add_item(close),
     );
-    let menu = Menu::new()
-        .add_submenu(submenu)
-        .add_native_item(MenuItem::Copy)
-        .add_item(CustomMenuItem::new("hide", "Hide"));
+    let menu = Menu::new().add_submenu(submenu);
+
     return menu;
 }
