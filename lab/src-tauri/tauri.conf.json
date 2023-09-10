@@ -18,6 +18,13 @@
       },
       "path": {
         "all": true
+      },
+      "http": {
+        "all": true,
+        "request": false,
+        "scope": [
+          "https://dictionary.cambridge.org/dictionary/english-vietnamese/*"
+        ]
       }
     },
     "bundle": {
