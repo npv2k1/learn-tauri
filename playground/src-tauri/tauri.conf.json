@@ -12,10 +12,23 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false,
+      "all": true,
       "shell": {
         "all": false,
         "open": true
+      },  
+      "fs": {
+        "all": true
+      },
+      "path": {
+        "all": true
+      },
+      "http": {
+        "all": true,
+        "request": false,
+        "scope": [
+          "https://dictionary.cambridge.org/dictionary/english-vietnamese/*"
+        ]
       }
     },
     "bundle": {
@@ -39,7 +52,8 @@
         "resizable": true,
         "title": "playground",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "maximized": true
       }
     ]
   }

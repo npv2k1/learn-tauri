@@ -1,48 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/tauri";
-import "./App.css";
-
-function App() {
-  const [key, setKey] = useState("");
-  const [value, setValue] = useState("");
-
-  async function greet() {
-    await invoke("put_db", { name });
-  }
-
-  async function put() {
-    await invoke("put_db", { key, value });
-  }
-
-  async function get() {
-    await invoke("get_db", { key }).then((res) => {
-      console.log(res);
-    });
-  }
-
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { routers } from '@/routes';
+const router = createBrowserRouter(routers);
+const App = () => {
   return (
-    <div className="container">
-      <div>
-        <input
-          value={key}
-          onChange={(e) => setKey(e.target.value)}
-          type="text"
-          placeholder="key"
-        />
-        <input
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          type="text"
-          placeholder="value"
-        />
-      </div>
-      <div>
-        <button onClick={put}>Put</button>
-        <button onClick={get}>Get</button>
-      </div>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
-}
+};
 
 export default App;

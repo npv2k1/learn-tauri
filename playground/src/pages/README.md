@@ -1,0 +1,31 @@
+# Learn react
+
+## Lessions
+
+- [ ] [Introduction to React.js](/learn/introduction-to-react)
+- [ ] [JSX Syntax and Components](/learn/jsx-syntax-and-components)
+- [ ] [Props and PropTypes](/learn/props-and-proptypes)
+- [ ] [Component State and Lifecycle](/learn/component-state-and-lifecycle)
+- [ ] [Handling Events](/learn/handling-events)
+- [ ] [Conditional Rendering](/learn/conditional-rendering)
+- [ ] [Lists and Keys](/learn/lists-and-keys)
+- [ ] [Forms and Controlled Components](/learn/forms-and-controlled-components)
+- [ ] [React Router](/learn/react-router)
+- [ ] [Working with APIs and Fetching Data](/learn/working-with-apis-and-fetching-data)
+- [ ] [Context API and useContext](/learn/context-api-and-usecontext)
+- [x] [React Hooks: useState](/learn/react-hooks-usestate)
+- [ ] [React Hooks: useEffect](/learn/react-hooks-useeffect)
+- [ ] [React Hooks: useRef](/learn/react-hooks-useref)
+- [ ] [React Hooks: useContext](/learn/react-hooks-usecontext)
+- [ ] [React Hooks: useReducer](/learn/react-hooks-usereducer)
+- [ ] [Redux: Actions and Reducers](/learn/redux-actions-and-reducers)
+- [ ] [Redux: Store and Middleware](/learn/redux-store-and-middleware)
+- [ ] [Redux: Connecting React Components](/learn/redux-connecting-react-components)
+- [ ] [Testing React Components with Jest and React Testing Library](/learn/testing-react-components)
+- [ ] [React Performance Optimization](/learn/react-performance-optimization)
+- [ ] [Server-side Rendering with Next.js](/learn/server-side-rendering-with-nextjs)
+- [ ] [Static Site Generation with Gatsby.js](/learn/static-site-generation-with-gatsbyjs)
+- [ ] [Building a Todo App](/learn/building-a-todo-app)
+- [ ] [Building a Weather App](/learn/building-a-weather-app)
+- [ ] [Building a Chat Application](/learn/building-a-chat-application)
+

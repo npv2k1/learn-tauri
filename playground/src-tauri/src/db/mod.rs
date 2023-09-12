@@ -7,7 +7,7 @@ fn make_db_path() -> String {
     let mut path = home_dir.join(".playground");
     std::fs::create_dir_all(path.clone()).unwrap();
     // create file db
-    path = path.join("db");
+    path = path.join("db.db");
     // return path
     path.to_str().unwrap().to_string()
 }
@@ -16,7 +16,7 @@ pub fn put(k: &str, v: &str) {
     let path = make_db_path();
     let db = DB::open_default(path).unwrap();
     db.put(k, v).unwrap();
-    println!("key: {}, value: {}", k, v);
+    println!("SET key: {}, value: {}", k, v);
 }
 
 pub fn get(k: &str) -> String {
@@ -26,11 +26,11 @@ pub fn get(k: &str) -> String {
     match value {
         Some(v) => {
             let s = String::from_utf8(v).unwrap();
-            println!("key: {}, value: {}", k, s);
+            println!("GET SOME key: {}, value: {}", k, s);
             return s;
         }
         None => {
-            println!("key: {}, value: None", k);
+            println!("GET NONE key: {}, value: None", k);
             return String::from("None");
         }
     }
