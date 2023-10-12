@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import { invoke } from '@tauri-apps/api/tauri';
-import { Button, Input } from 'antd';
+import { invoke } from '@tauri-apps/api';
+import { Input, Button } from 'antd';
+import React, { useState } from 'react';
 
-function Tauri() {
+const TauriStorage = () => {
   const [key, setKey] = useState('');
   const [value, setValue] = useState('');
 
@@ -38,6 +37,6 @@ function Tauri() {
       </div>
     </div>
   );
-}
+};
 
-export default Tauri;
+export default TauriStorage;

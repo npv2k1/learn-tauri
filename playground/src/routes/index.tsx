@@ -1,4 +1,3 @@
-import Tauri from '@/Tauri';
 import LearnPage, { lessionsRouters } from '@/lessions';
 import HomePage from '@/pages';
 import { Outlet, RouteObject } from 'react-router-dom';
@@ -6,6 +5,7 @@ import Root from './root';
 import LessionDoc from '@/lessions/components/LessionDoc';
 import DictionaryPage from '@/modules/dictionary';
 import { MenuProps, Spin } from 'antd';
+import Tauri from '@/modules/tauri';
 
 export const routers: RouteObject[] = [
   {

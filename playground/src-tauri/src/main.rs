@@ -1,11 +1,16 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+
+
+use std::{thread, time::Duration};
+
 use tauri::Manager;
 
 mod commands;
 pub mod db;
 mod menus;
+mod events;
 // the payload type must implement `Serialize` and `Clone`.
 #[derive(Clone, serde::Serialize)]
 struct Payload {
@@ -14,6 +19,7 @@ struct Payload {
 fn main() {
     tauri::Builder::default()
         .menu(menus::make_menu())
+        .plugin(tauri_plugin_websocket::init())
         .invoke_handler(tauri::generate_handler![
             commands::greet,
             commands::put_db,
@@ -36,15 +42,11 @@ fn main() {
             // unlisten to the event using the `id` returned on the `listen_global` function
             // a `once_global` API is also exposed on the `App` struct
             // app.unlisten(id);
+            //       
 
-            // emit the `event-name` event to all webview windows on the frontend
-            // app.emit_all(
-            //     "click",
-            //     Payload {
-            //         message: "Tauri is awesome!".into(),
-            //     },
-            // )
-            // .unwrap();
+            // let handle = thread::spawn(|| {
+            //     events::handle_time_event(app); 
+            // });       
             Ok(())
         })
         .run(tauri::generate_context!())
